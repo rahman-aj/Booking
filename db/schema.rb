@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_23_111115) do
+ActiveRecord::Schema.define(version: 2020_06_23_112632) do
+
+  create_table "mentees", force: :cascade do |t|
+    t.string "Name"
+    t.string "Email"
+    t.string "Password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "mentors", force: :cascade do |t|
     t.string "Name"
